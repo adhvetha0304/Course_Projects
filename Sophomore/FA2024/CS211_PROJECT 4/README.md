@@ -75,3 +75,5 @@ make valgrind
 
 ## Notes
 This project was completed as part of university coursework and tested using an autograder.
+
+---
