@@ -1,0 +1,50 @@
+﻿ADHVETHA SP - 658833645 
+
+
+REGULAR MAZE ESCAPE PATH:
+
+
+(gdb) p *start
+$1 = {whatsHere = "", north = 0x0, south = 0x0, east = 0x55e356692600, 
+  west = 0x0}
+(gdb) p*(start->east)
+$2 = {whatsHere = "", north = 0x0, south = 0x55e356692740, east = 0x0, 
+  west = 0x55e3566922d0}
+(gdb) p*(start->east->south)
+$3 = {whatsHere = "", north = 0x55e356692600, south = 0x55e356692880, 
+  east = 0x0, west = 0x0}
+(gdb) p*(start->east->south->south)
+$4 = {whatsHere = "", north = 0x55e356692740, south = 0x55e3566929c0, 
+  east = 0x55e3566928d0, west = 0x55e356692830}
+(gdb) p*(start->east->south->south->east)
+$5 = {whatsHere = "", north = 0x55e356692790, south = 0x55e356692a10, 
+  east = 0x0, west = 0x55e356692880}
+(gdb) p*(start->east->south->south->east->south)
+$6 = {whatsHere = "", north = 0x55e3566928d0, south = 0x0, 
+  east = 0x55e356692a60, west = 0x0}
+(gdb) p*(start->east->south->south->east->south->east)
+$7 = {whatsHere = "", north = 0x55e356692920, south = 0x0, east = 0x0, 
+  west = 0x55e356692a10}
+(gdb) p*(start->east->south->south->east->south->east->north)
+$8 = {whatsHere = "Wand", north = 0x0, south = 0x55e356692a60, east = 0x0, 
+  west = 0x0}
+(gdb) p*(start->east->south->south->east->south->east->north->south)
+$9 = {whatsHere = "", north = 0x55e356692920, south = 0x0, east = 0x0, 
+  west = 0x55e356692a10}
+(gdb) p*(start->east->south->south->east->south->east->north->south->west)
+$10 = {whatsHere = "", north = 0x55e3566928d0, south = 0x0, 
+  east = 0x55e356692a60, west = 0x0}                                                         h)gdb) p*(start->east->south->south->east->south->east->north->south->west->nort) 
+$11 = {whatsHere = "", north = 0x55e356692790, south = 0x55e356692a10, 
+  east = 0x0, west = 0x55e356692880}
+->north)(start->east->south->south->east->south->east->north->south->west->north)
+$12 = {whatsHere = "", north = 0x55e356692650, south = 0x55e3566928d0, 
+  east = 0x0, west = 0x0}
+(gdb) p*(start->east->south->south->east->south->east->north->south->west->north->north->norh)
+$13 = {whatsHere = "Spellbook", north = 0x0, south = 0x55e356692790, 
+  east = 0x55e3566926a0, west = 0x0}
+(gdb) p*(start->east->south->south->east->south->east->north->south->west->north->north->north->east)
+$14 = {whatsHere = "", north = 0x0, south = 0x55e3566927e0, east = 0x0, 
+  west = 0x55e356692650}
+(gdb) p*(start->east->south->south->east->south->east->north->south->west->north->north->north->east->south)
+$15 = {whatsHere = "Potion", north = 0x55e3566926a0, south = 0x0, east = 0x0, 
+  west = 0x0}

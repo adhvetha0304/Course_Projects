@@ -1,0 +1,33 @@
+﻿ADHVETHA SP - 658833645 
+
+
+TWISTY MAZE ESCAPE PATH:
+
+
+(gdb) p *start
+$1 = {whatsHere = "", north = 0x0, south = 0x5f90f3bcec60, east = 0x0, 
+  west = 0x5f90f3bceb20}
+(gdb) p *(start->south)
+$2 = {whatsHere = "", north = 0x5f90f3bceb70, south = 0x5f90f3bceb20, 
+  east = 0x5f90f3bcebc0, west = 0x5f90f3bceab0}
+(gdb) p *(start->south->east)
+$3 = {whatsHere = "Spellbook", north = 0x0, south = 0x0, 
+  east = 0x5f90f3bcec60, west = 0x0}
+(gdb) p *(start->south->east->east)
+$4 = {whatsHere = "", north = 0x5f90f3bceb70, south = 0x5f90f3bceb20, 
+  east = 0x5f90f3bcebc0, west = 0x5f90f3bceab0}
+(gdb) p *(start->south->east->east->north)
+$5 = {whatsHere = "", north = 0x0, south = 0x5f90f3bcec60, 
+  east = 0x5f90f3bced00, west = 0x5f90f3bcee80}
+(gdb) p *(start->south->east->east->north->east)
+$6 = {whatsHere = "", north = 0x5f90f3bcecb0, south = 0x5f90f3bced50, 
+  east = 0x5f90f3bcee80, west = 0x5f90f3bceb70}
+(gdb) p *(start->south->east->east->north->east->south)
+$7 = {whatsHere = "Wand", north = 0x0, south = 0x5f90f3bced00, 
+  east = 0x5f90f3bcec10, west = 0x5f90f3bce3c0}
+(gdb) p *(start->south->east->east->north->east->south->south)
+$8 = {whatsHere = "", north = 0x5f90f3bcecb0, south = 0x5f90f3bced50, 
+  east = 0x5f90f3bcee80, west = 0x5f90f3bceb70}
+(gdb) p *(start->south->east->east->north->east->south->south->north)
+$9 = {whatsHere = "Potion", north = 0x5f90f3bcec10, south = 0x5f90f3bced00, 
+  east = 0x0, west = 0x5f90f3bcee30}
