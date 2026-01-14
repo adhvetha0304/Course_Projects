@@ -1,4 +1,4 @@
-# Popular Vote Minimizer
+# Shortest Word Ladder
 
 **Course:** CS 211 – Programming Practicum  
 **Semester:** Fall 2024  
@@ -7,73 +7,69 @@
 ---
 
 ## Overview
-This project implements a **Popular Vote Minimizer**, which computes the minimum number of popular votes required to win a U.S. presidential election using state-level electoral data.
-
-The program evaluates combinations of states to determine the smallest subset whose electoral votes meet or exceed the required threshold while minimizing the total popular vote count.
+I implemented a **Shortest Word Ladder** solver that finds the minimal sequence of valid dictionary words connecting two given words, changing one letter at a time. It guarantees the shortest ladder by performing a breadth-first search (BFS) over the word graph.
 
 ---
 
 ## Features
-- Processes state election data from input files  
-- Computes the minimum popular vote needed to secure an electoral victory  
-- Uses recursive and dynamic programming techniques to explore state combinations  
-- Supports fast and quiet execution modes via command-line flags  
-- Includes a dedicated test suite and memory-safety checks using Valgrind  
-- Built and executed using a custom Makefile  
+- Loads a filtered dictionary containing only words of the required length  
+- BFS guarantees the shortest path  
+- Frees all dynamic memory  
+- `_quiet_` (`-q`) and `_fast_` (`-f`) command-line flags  
+- Valgrind target for leak checking  
+- Unit-style test executable (`test.exe`)  
+- **Makefile** for build / run / test / Valgrind
 
 ---
 
 ## Files
-- `MinPopVote.c` – Core implementation of the vote minimization logic  
-- `app.c` – Main driver program  
-- `test.c` – Unit tests for validating correctness  
-- `Makefile` – Build, test, and debugging automation  
-- `Results_Analysis.pdf` – Written analysis of results and observations from running the program  
+| File | Purpose |
+| ---- | ------- |
+| `main.c` | Core implementation and helper tests |
+| `Makefile` | Build + run targets (`make run`, `make valgrind`, …) |
+| `Observations.pdf` | My written analysis and discussion of results |
 
 ---
 
-## Build and Run
+## Build & Run
 
-### Run the program
+### Build the application
 ```bash
-make run
+make build
 ```
 
-
-### Fast and quiet modes
+### Run
 ```bash
-make run_fast
-make run_quiet
+make run             # interactive
+make run_quiet       # minimal output
+make run_fast        # skips slower validation
 make run_fast_quiet
 ```
 
-
-### Build and run tests
+### Tests
 ```bash
 make build_test
 make run_test
 ```
 
-
-### Run memory checks with Valgrind
+### Memory-leak check
 ```bash
 make valgrind
 ```
-
 ---
 
 ## Core Concepts Used
-- Recursive and dynamic programming approaches  
-- File input/output in C  
-- Algorithmic optimization  
-- Command-line argument handling  
-- Unit testing in C  
-- Memory management and leak detection  
-- Build automation with Makefiles  
+- Breadth-first search on word graphs
+- Dynamic arrays & manual memory management (malloc, free)
+- File I/O with getline
+- Command-line argument parsing
+- Unit testing in plain C
+- Build automation with Makefiles
+- Leak detection with Valgrind
 
 ---
 
-## Notes
-This project was completed as part of university coursework and tested using an autograder.
+Notes
+I completed this project for CS 211 coursework and verified it with the autograder. Results and observations are documented in Observations.pdf.
 
 ---
