@@ -69,7 +69,7 @@ make valgrind
 
 ---
 
-Notes
+##Notes
 I completed this project for CS 211 coursework and verified it with the autograder. Results and observations are documented in Observations.pdf.
 
 ---
